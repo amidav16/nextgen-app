@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "10"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["inline-react-svg"],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      },
+      "@babel/plugin-transform-runtime"
+    ]
+  ]
+}
