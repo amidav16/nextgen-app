@@ -1,5 +1,6 @@
 {
   "name": "diggit_code_challenge",
+  "homepage": "http://amidav16.github.io/diggit-app",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -10,7 +11,9 @@
     "watch:client": "webpack --watch --mode development",
     "watch:server": "nodemon src/server/server.js --watch src/server --watch public/bundle.js",
     "build": "webpack --mode production",
-    "start": "node src/server/server.js"
+    "start": "node src/server/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -57,6 +60,7 @@
     "babel-register": "^6.26.0",
     "css-loader": "^3.5.2",
     "file-loader": "^5.1.0",
+    "gh-pages": "^3.1.0",
     "nodemon": "^2.0.2",
     "style-loader": "^1.1.4",
     "svg-url-loader": "^6.0.0",
