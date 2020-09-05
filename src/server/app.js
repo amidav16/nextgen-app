@@ -34,7 +34,7 @@ app.all("/api*", (req, res) => {
 app.use(express.static("public"));
 
 app.use((req, res, next) => {
-  res.sendFile(path.resolve(__dirname, "..", "..", "public", "index.html"));
+  res.sendFile(path.resolve(__dirname, "..", "..", "index.html"));
 });
 
 module.exports = app;
