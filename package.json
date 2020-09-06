@@ -1,5 +1,5 @@
 {
-  "name": "diggit_code_challenge",
+  "name": "nextgen-app",
   "homepage": "http://amidav16.github.io/nextgen-app",
   "version": "1.0.0",
   "description": "",
@@ -11,10 +11,8 @@
     "watch:server": "nodemon src/server/server.js --watch src/server --watch public/bundle.js",
     "build": "webpack --mode production",
     "start": "node src/server/server.js",
-    "transpile": "babel src -d public --copy-files",
-    "prepublishOnly": "npm run transpile",
-    "deploy": "gh-pages -d public",
-    "publish-demo": "npm run build && npm run deploy"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d"
   },
   "keywords": [],
   "author": "",
